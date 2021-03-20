@@ -1,9 +1,10 @@
 
-import BarCharts from './BarCharts';
+// import BarCharts from './BarCharts';
 import CardiologistList from './CardiologistList'
 import SmokingAlcoholChart from './SmokingAlcoholChart';
 import GenderChart from './GenderChart';
-import AgeChart from './AgeChart'
+import AgeChart from './AgeChart';
+import Result from './Result';
 
 import './css/Output.css'
 
@@ -24,7 +25,8 @@ function Output({pred_data}){
             </div>
             <div className="prediction-output">
                 <h2 class="title" >Output</h2>
-                <p>{JSON.stringify(pred_data)}</p>
+                <Result/>
+                {/* <p>{JSON.stringify(pred_data)}</p> */}
             </div>
             <div className="doctor-info">
                 <h2 class="title" >Cardiologists Near You</h2>

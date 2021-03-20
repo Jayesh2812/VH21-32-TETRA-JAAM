@@ -58,8 +58,10 @@ export class CardiologistList extends Component {
             <h1>{this.state.longitude}</h1>
             {/* https://www.google.com/maps/embed/v1/place?key=AIzaSyANkBIHcqJdLSJ-cX7Qdu1huVD9dhSfFys
     &q=Space+Needle,Seattle+WA */}
-            <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyANkBIHcqJdLSJ-cX7Qdu1huVD9dhSfFys
-    &q=cardio,hospital&q=latitude,longitude" className="map"></iframe>
+    {/* https://www.google.com/maps/search/?api=1&query=pizza+seattle+wa */}
+    {/* https://www.google.com/maps/dir/?api=1&origin=Space+Needle+Seattle+WA&destination=Pike+Place+Market+Seattle+WA&travelmode=bicycling */}
+            <iframe src="https://www.google.com/maps/dir/?key=AIzaSyANkBIHcqJdLSJ-cX7Qdu1huVD9dhSfFys
+    &origin=latitude+longitude&destination=cardio+hospital" className="map"></iframe>
             <h2 className="title">Top Cardiology hospitals</h2>
             {/* <div></div> */}
             <div className="hospitals">
