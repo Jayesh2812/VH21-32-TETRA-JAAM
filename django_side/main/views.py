@@ -15,13 +15,16 @@ def get_form_data(request):
     result_text = ''
     value = predict(attribute_data)
     if value < 0.33:
-        result_text = "Healthy"
+        result_text = "Healthy State - You are more likely not suffering from cardiovascular disease"
     elif value < 0.66:
-        result_text = "Moderate"
+        result_text = "concerned State - You may need to visit a doctor"
     else:
-        result_text = "Severe Risk"
-
-    return JsonResponse({'result': result_text})
+        result_text = "Danger State - You are more likely suffering from cardiovascular disease"
+    height = int(attribute_data['height'])
+    weight = int(attribute_data['weight'])
+    print(height, weight)
+    BMI = get_BMI(height, weight)
+    return JsonResponse({'percentage':value, 'result': result_text, 'BMI': BMI})
 
 
 def predict(data):
@@ -43,3 +46,8 @@ def predict(data):
         RFRmodel=pickle.load(f)
     
     return RFRmodel.predict([attribute_data_values])[0]
+
+def get_BMI(height, weight):
+    height = height / 100
+    BMI = weight / (height ** 2)
+    return BMI

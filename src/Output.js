@@ -5,6 +5,7 @@ import SmokingAlcoholChart from './SmokingAlcoholChart';
 import GenderChart from './GenderChart';
 import AgeChart from './AgeChart';
 import Result from './Result';
+import BMI from './BMI';
 
 import './css/Output.css'
 
@@ -17,6 +18,8 @@ function Output({pred_data}){
                     ]
     var active = [{ x: 'Alcohol', y: 48.4 }, { x: 'Smokers', y: 47.4 }]
     var nonActive = [{ x: 'Alcohol', y: 50.8 }, { x: 'Smokers', y: 52.5 }]
+
+    console.log(pred_data)
     return (
         <div className="Output">
             <div className="charts">
@@ -24,9 +27,11 @@ function Output({pred_data}){
                 <SmokingAlcoholChart data1={active} data2={nonActive} />
             </div>
             <div className="prediction-output">
-                <h2 class="title" >Output</h2>
-                <Result/>
-                {/* <p>{JSON.stringify(pred_data)}</p> */}
+                <h2 class="title" >Prediction</h2>
+                <Result percent={pred_data.percentage}/>
+                <h3 class="chart-title">{pred_data.result}</h3>
+                {/* <BMI bmi={pred_data.BMI}/> */}
+                <h3 class="charts-title">BMI : {pred_data.BMI}</h3>
             </div>
             <div className="doctor-info">
                 <h2 class="title" >Cardiologists Near You</h2>
