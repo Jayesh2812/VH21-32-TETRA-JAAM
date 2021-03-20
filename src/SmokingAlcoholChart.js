@@ -5,6 +5,8 @@ function SmokingAlcoholChart({ data1, data2 }) {
   var color = 'white'
   return (
     <div className="double-slider-chart">
+      <h4 class="chart-title">Smokers and Alcoholics Plot</h4>
+
       <XYPlot yDomain={[0, 100]} xType="ordinal" width={250} height={250} xDistance={100} >
         <XAxis hideLine style={{
           text: { stroke: 'none', fill: color, fontWeight: 600 },

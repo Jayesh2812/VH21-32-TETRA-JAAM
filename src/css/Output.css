@@ -38,3 +38,6 @@
 .rv-xy-plot__inner{
     width:100% !important;
 }
+.chart-title{
+    text-align:center;
+}

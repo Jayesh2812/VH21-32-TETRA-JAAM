@@ -1,5 +1,4 @@
 
-import BarCharts from './BarCharts';
 import CardiologistList from './CardiologistList'
 import SmokingAlcoholChart from './SmokingAlcoholChart';
 import GenderChart from './GenderChart';

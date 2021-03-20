@@ -5,7 +5,10 @@ function AgeChart({data1}) {
     var color="white"
     return (
         <div className="age-chart">
+      <h4 class="chart-title">Age Plot</h4>
             <XYPlot yDomain={[0, 100]} xType="ordinal" width={1000} height={300} xDistance={100} >
+            <VerticalGridLines/>
+            <HorizontalGridLines/>
                 <XAxis style={{
                     text: { stroke: 'none', fill: color, fontWeight: 600 }
                 }} />
