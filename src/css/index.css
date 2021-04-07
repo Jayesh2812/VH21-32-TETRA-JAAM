@@ -1,4 +1,4 @@
-:root{
+/* :root{
     --clr-bg : #212747 ;
     --clr-secondary-bg : #353F63;
     --clr-tertiary-bg : #57669e;
@@ -15,7 +15,6 @@
 }
 body{
     background-color: var(--clr-bg);
-    /* background: var(--linear-gradient); */
     font-family: var(--font-family);
     color : var(--clr-primary)
-}
+} */

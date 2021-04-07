@@ -30,42 +30,29 @@ form{
     margin-bottom:.1em;
     margin-left: .5em;
 }
-.gender-div label, .physically-active-div label{
-    display:inline-block;
-}
 
 input[type="radio"]{
-    width:1em !important;
+     width:1em !important; 
     background:rgb(34, 15, 15);
+    cursor:pointer;
 }
-label[for="gender_male"], label[for="active"]{
-    margin-right:2em;
-}
+
 input[type="radio"] + label{
     display:inline-block;
     margin-right:2em;
     margin-bottom:1.5em;
+    cursor:pointer;
 
 }
-.info-div input,select{
+.info-div input:not([type="radio"]),select{
     margin-bottom:.8em;
     padding:.5em .75em;
     border-radius:100vw;
     background-color: transparent;
     color: var(--clr-primary);
     border:var(--clr-primary) 2px solid;
-    /* opacity:.5; */
     font-family: var(--font-family);
-    /* outline:none; */
     width:100%;
-    transition: 500ms ease oapcity;
-
-}
-input[type="date"]::-webkit-calendar-picker-indicator{
-    cursor: pointer;
-    opacity: 1;
-    filter: invert(1);
-    /* width:2em; */
 
 }
 input[type="number"]::-webkit-inner-spin-button{
@@ -84,14 +71,10 @@ option{
     border:2px solid var(--clr-primary);
     color:var(--clr-primary);
     cursor:pointer;
-    outline:none;
     transition:.5s ease-out;
     transition-property: color background-color;
 }
 .btn:hover , .btn:focus{
     background:var(--clr-primary);
     color:var(--clr-secondary-bg)
-}
-option::selection{
-    background-color: red;
 }
