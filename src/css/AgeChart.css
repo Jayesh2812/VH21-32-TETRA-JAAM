@@ -4,3 +4,13 @@
     border-radius:20px;
     padding:1em;
 }
+@media screen and (max-width : 400px){
+    .age-chart{
+        overflow:scroll;
+
+    }
+    .age-chart .rv-xy-plot {
+    }
+    .age-chart .rv-xy-plot__inner {
+    }
+}

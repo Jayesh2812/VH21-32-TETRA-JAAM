@@ -1,0 +1,12 @@
+.bmi-image{
+    margin: 0 auto;
+    margin-left:50%;
+    transform:translate(-50%);
+}
+.bmi-title{
+    text-align:center;
+    font-weight:500;
+}
+.bmi-image{
+    width:90px;
+}

@@ -1,6 +1,6 @@
 import { XYPlot, XAxis, DecorativeAxis, YAxis, VerticalBarSeries, VerticalGridLines, HorizontalGridLines } from 'react-vis';
 import '../node_modules/react-vis/dist/style.css';
-import './css/BarCharts.css'
+import './css/Charts.css'
 function SmokingAlcoholChart({ data1, data2 }) {
   var color = 'white'
   return (

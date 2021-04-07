@@ -13,13 +13,13 @@ form{
     margin: 1em auto;
     border-radius:20px;
     padding:1em 0;
-    width:max(40em, 60vw);
+    width:max(60vw, 350px);
     
 }
 
 .info-div,.btn{
     margin:1em 0;
-    width:70%;
+    width:max(300px, 70%);
     padding:2em;
     border:2px solid gray;
     border-radius:20px;
@@ -54,15 +54,12 @@ input[type="radio"] + label{
     background-color: transparent;
     color: var(--clr-primary);
     border:var(--clr-primary) 2px solid;
-    opacity:.5;
+    /* opacity:.5; */
     font-family: var(--font-family);
-    outline:none;
+    /* outline:none; */
     width:100%;
     transition: 500ms ease oapcity;
 
-}
-.info-div input:hover, select:hover,input:focus, select:focus{
-    opacity:1;
 }
 input[type="date"]::-webkit-calendar-picker-indicator{
     cursor: pointer;
@@ -91,7 +88,10 @@ option{
     transition:.5s ease-out;
     transition-property: color background-color;
 }
-.btn:hover{
+.btn:hover , .btn:focus{
     background:var(--clr-primary);
     color:var(--clr-secondary-bg)
+}
+option::selection{
+    background-color: red;
 }

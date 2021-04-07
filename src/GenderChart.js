@@ -1,6 +1,6 @@
 import { XYPlot, XAxis, Hint, YAxis, VerticalBarSeries } from 'react-vis';
 import '../node_modules/react-vis/dist/style.css';
-import './css/BarCharts.css'
+import './css/Charts.css'
 function GenderChart({ data1 }) {
   var color = 'white'
   return (

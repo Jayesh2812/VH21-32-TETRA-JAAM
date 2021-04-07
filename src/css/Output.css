@@ -8,8 +8,10 @@
     grid-column:1/2;
     display:flex;
     flex-direction:column;
-    align-items:center;
+    align-items:stretch;
+    justify-content:stretch;
     gap:1em;
+    /* background:red; */
 }
 .prediction-output{
     grid-column:2/3;
@@ -40,4 +42,29 @@
 }
 .chart-title{
     text-align:center;
+}
+@media screen and (max-width : 400px){
+    .Output{
+        grid-template-columns:1fr;
+        /* overflow:hidden; */
+        gap:.5em;
+        padding:.5em;
+    }
+    .Output > *{
+        width: calc(100vw - 1em);
+        /* background:red; */
+    }
+    .prediction-output{
+        grid-column:1/-1;
+        grid-row:1/2;
+    }
+    .charts{
+        gap:.5em;
+    }
+    .doctor-info{
+        grid-column:1/-1;
+        grid-row:2/3;
+
+        
+    }
 }

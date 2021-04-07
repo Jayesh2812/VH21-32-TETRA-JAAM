@@ -1,4 +1,4 @@
-
+import {useEffect} from 'react';
 // import BarCharts from './BarCharts';
 import CardiologistList from './CardiologistList'
 import SmokingAlcoholChart from './SmokingAlcoholChart';
@@ -18,8 +18,9 @@ function Output({pred_data}){
                     ]
     var active = [{ x: 'Alcohol', y: 48.4 }, { x: 'Smokers', y: 47.4 }]
     var nonActive = [{ x: 'Alcohol', y: 50.8 }, { x: 'Smokers', y: 52.5 }]
-
-    console.log(pred_data)
+    useEffect(()=>{
+        alert("Result highly experimental DO NOT take seriously")
+    },[])
     return (
         <div className="Output">
             <div className="charts">
@@ -29,9 +30,11 @@ function Output({pred_data}){
             <div className="prediction-output">
                 <h2 class="title" >Prediction</h2>
                 <Result percent={pred_data.percentage}/>
-                <h3 class="chart-title">{pred_data.result}</h3>
-                {/* <BMI bmi={pred_data.BMI}/> */}
-                <h3 class="charts-title">BMI : {pred_data.BMI}</h3>
+                <h3 class="bmi-title">Risk Percentange : <strong>{pred_data.percentage * 100}% </strong></h3>
+                <br/>
+                <h3 class="bmi-title"> {pred_data.result}</h3><br/>
+                <BMI bmi={pred_data.BMI}/>
+               
             </div>
             <div className="doctor-info">
                 <h2 class="title" >Cardiologists Near You</h2>
