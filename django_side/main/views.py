@@ -24,11 +24,7 @@ def get_form_data(request):
     weight = int(attribute_data['weight'])
     # print(height, weight)
     BMI = get_BMI(height, weight)
-<<<<<<< HEAD
-    return JsonResponse({'percentage':round(value, 2), 'result': result_text, 'BMI': BMI})
-=======
     return JsonResponse({'percentage':round(value, 2), 'result': result_text, 'BMI': round(BMI,2)})
->>>>>>> a03ebf7ba02f808efd059c408fe30ba2923af729
 
 
 def predict(data):
@@ -46,7 +42,7 @@ def predict(data):
     attribute_data_values.append(int(data['physically-active']))
 
     print(attribute_data_values)
-    with open('RFRmodel','rb') as f:
+    with open('main/RFRmodel','rb') as f:
         RFRmodel=pickle.load(f)
     
     return RFRmodel.predict([attribute_data_values])[0]

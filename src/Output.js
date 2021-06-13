@@ -19,7 +19,7 @@ function Output({pred_data}){
     var active = [{ x: 'Alcohol', y: 48.4 }, { x: 'Smokers', y: 47.4 }]
     var nonActive = [{ x: 'Alcohol', y: 50.8 }, { x: 'Smokers', y: 52.5 }]
     useEffect(()=>{
-        alert("Result highly experimental DO NOT take seriously")
+        alert("DISCLAIMER : This project is just for demostration and not for practical use !!!")
     },[])
     return (
         <div className="Output">
