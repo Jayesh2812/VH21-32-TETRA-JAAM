@@ -41,6 +41,7 @@
     width:100% !important;
 }
 .chart-title{
+    margin-top: 5px;
     text-align:center;
 }
 @media screen and (max-width : 400px){
@@ -67,4 +68,10 @@
 
         
     }
+.charts-title{
+    margin-top:40px;
+    text-align:center;
+}
+.bmi-data{
+    text-align:center
 }

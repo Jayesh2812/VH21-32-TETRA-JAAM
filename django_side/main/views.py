@@ -17,14 +17,18 @@ def get_form_data(request):
     if value < 0.33:
         result_text = "Healthy State - You are more likely not suffering from cardiovascular disease"
     elif value < 0.66:
-        result_text = "You are at Average Risk towards Cardiovascular disease"
+        result_text = "Concerned State - You are at moderate risk, do adopt some good habits"
     else:
         result_text = "Warning State - You are more likely suffering from cardiovascular disease, you may need to consult to a doctor"
     height = int(attribute_data['height'])
     weight = int(attribute_data['weight'])
     # print(height, weight)
     BMI = get_BMI(height, weight)
+<<<<<<< HEAD
     return JsonResponse({'percentage':round(value, 2), 'result': result_text, 'BMI': BMI})
+=======
+    return JsonResponse({'percentage':round(value, 2), 'result': result_text, 'BMI': round(BMI,2)})
+>>>>>>> a03ebf7ba02f808efd059c408fe30ba2923af729
 
 
 def predict(data):
