@@ -29,9 +29,11 @@ function Output({pred_data}){
             <div className="prediction-output">
                 <h2 class="title" >Prediction</h2>
                 <Result percent={pred_data.percentage}/>
+                <h3 class="chart-title">Risk Level: {pred_data.percentage*100}%</h3>
                 <h3 class="chart-title">{pred_data.result}</h3>
                 {/* <BMI bmi={pred_data.BMI}/> */}
-                <h3 class="charts-title">BMI : {pred_data.BMI}</h3>
+                <h3 class="charts-title">BMI</h3>
+                <p class="bmi-data">{pred_data.BMI} kg/m2</p>
             </div>
             <div className="doctor-info">
                 <h2 class="title" >Cardiologists Near You</h2>
